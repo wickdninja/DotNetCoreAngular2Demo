@@ -1,10 +1,28 @@
 # ASP.NET Core / Angular 2 via CLI Quick Start
 
+## Disclaimer
+
+### This guide was created using the following versions, and provides no guarentee for compatibility with any other versions. 
+
+```text
+angular-cli: 1.0.0-beta.28.3
+node: 7.4.0
+os: darwin x64
+@angular/common: 2.4.6
+@angular/compiler: 2.4.6
+@angular/core: 2.4.6
+@angular/forms: 2.4.6
+@angular/http: 2.4.6
+@angular/platform-browser: 2.4.6
+@angular/platform-browser-dynamic: 2.4.6
+@angular/router: 3.4.6
+@angular/compiler-cli: 2.4.6
+```
+
 ## Install Project Dependencies
 
 - [ASP.NET Core](https://www.microsoft.com/net/core)
 - [NodeJS](https://nodejs.org)
-  - This guide created with v7.4.0
 - Yoeman
   - `$ npm i -g yo`
 - ASP.NET Core Generator
