@@ -134,8 +134,11 @@ os: darwin x64
   ```json
   "scripts": {
     "ng": "ng",
+    "prerestore": "npm install",
+    "restore": "dotnet restore",
+    "postrestore": "npm run build",
+    "prestart": "npm run restore",
     "start": "dotnet run",
-    "prestart": "npm run build",
     "client": "ng serve",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
