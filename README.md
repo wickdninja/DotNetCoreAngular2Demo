@@ -60,6 +60,7 @@ os: darwin x64
   - Open `Startup.cs` 
     - Locate the `Configure` method add the following to it
       - Configure CORS
+      
         ```C#
         app.UseCors(cors =>
           cors
