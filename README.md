@@ -24,7 +24,8 @@
 
 - Open project.json
   - Exclude `node_modules` from compilation
-    - Add the following to `"buildOptions"`
+    - Add the following to `"buildOptions"`   
+    
         ```json
         "compile": {
           "exclude": [
@@ -32,6 +33,7 @@
           ]
         }
         ```
+        
   - Add StaticFiles dependency
     - Add `"Microsoft.AspNetCore.StaticFiles": "1.0.0"` to `dependencies`
 - Restore dependencies
@@ -48,7 +50,8 @@
           .AllowAnyOrigin()
         );
         ```
-      - Route requests to root for client side spa
+      - Route requests to root for client side spa       
+      
         ```C#
         app.Use(async (context, next) =>
         {
@@ -61,11 +64,15 @@
             }
         });
         ```
-      - Enable static files (without allow directory browsing)
+        
+      - Enable static files (without allow directory browsing)        
+      
         ```C#
         app.UseFileServer(enableDirectoryBrowsing: false);
         ```
-      - Setup routes for API
+        
+      - Setup routes for API        
+      
         ```C#
         app.UseMvc(routes =>
         {
@@ -74,6 +81,7 @@
                   template: "api/{controller=Version}/{action=Index}/{id?}");
         });
         ```
+        
 - Verify changes by building server
   - `$ dotnet build`
 
@@ -103,7 +111,8 @@
 ## Build Scripts
 
 - Open `project.json`
-  - Paste the following into `scripts`
+  - Replace `scripts` with the following       
+  
   ```json
   "scripts": {
     "ng": "ng",
@@ -124,6 +133,7 @@
     "build:prod": "dotnet publish -c release"
   }
   ```
+  
 
 ## Run App
 
@@ -135,4 +145,5 @@
       - Notice `app works!` text from our AppComponent is displayed on the screen
   - Verify API is working
     - Navigate to `http://localhost://5000/api/values`
+      - The response should be the following JSON `["value1","value2"]`
 
