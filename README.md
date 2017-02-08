@@ -56,10 +56,11 @@ os: darwin x64
     - Add `"Microsoft.AspNetCore.StaticFiles": "1.0.0"` to `dependencies`
 - Restore dependencies
   - `$ dotnet restore`
-- Configure serve to handle api routes and client side routes
+- Configure server to handle api routes and client side routes
   - Open `Startup.cs` 
     - Locate the `Configure` method add the following to it
       - Configure CORS
+      
         ```C#
         app.UseCors(cors =>
           cors
